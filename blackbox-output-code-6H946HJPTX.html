@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grok's Pizza Palace</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #ff4500; color: white; text-align: center; padding: 20px; }
+        nav { background-color: #333; color: white; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        section { padding: 20px; max-width: 800px; margin: auto; }
+        .menu { display: flex; flex-wrap: wrap; justify-content: space-around; }
+        .pizza { background: white; border: 1px solid #ddd; margin: 10px; padding: 10px; width: 200px; text-align: center; }
+        form { background: white; padding: 20px; border: 1px solid #ddd; }
+        input, select, button { display: block; width: 100%; margin: 10px 0; padding: 10px; }
+        button { background-color: #ff4500; color: white; border: none; cursor: pointer; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grok's Pizza Palace</h1>
+        <p>The best pizza in the universe!</p>
+    </header>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu">
+            <div class="pizza">
+                <h3>Margherita</h3>
+                <p>Tomato, mozzarella, basil</p>
+                <p>$12</p>
+            </div>
+            <div class="pizza">
+                <h3>Pepperoni</h3>
+                <p>Pepperoni, cheese, tomato sauce</p>
+                <p>$15</p>
+            </div>
+            <div class="pizza">
+                <h3>Veggie Supreme</h3>
+                <p>Bell peppers, onions, mushrooms, olives</p>
+                <p>$14</p>
+            </div>
+        </div>
+    </section>
+    <section id="order">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="pizza">Pizza Type:</label>
+            <select id="pizza">
+                <option>Margherita</option>
+                <option>Pepperoni</option>
+                <option>Veggie Supreme</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" required>
+            <button type="submit">Order Now</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@grokspizza.com</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Address: 42 AI Street, Grok City</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Grok's Pizza Palace. Powered by xAI.</p>
+    </footer>
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Order placed! (This is a demo - no real order processed.)');
+        });
+    </script>
+</body>
+</html>
